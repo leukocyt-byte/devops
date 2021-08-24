@@ -24,6 +24,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Push docker image
-        run: docker-compose -f docker-image/compose-build-image.yaml up -d
+        run: sudo docker-compose -f docker-image/compose-build-image.yaml up -d
       - name: Run container with app
-        run: docker-compose -f compose-run-container.yaml up -d
+        run: sudo docker-compose -f compose-run-container.yaml up -d
