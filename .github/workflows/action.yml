@@ -30,6 +30,7 @@ jobs:
       - name: Push docker image
         run: docker-compose -f compose-build-image.yaml push
       - name: Clean containers
-        run: docker kill $(docker ps -q) > /dev/null 2>&1
+        run: docker kill $(docker ps -q)
+        continue-on-error: true
       - name: Run container with app
         run:  docker-compose -f compose-run-container.yaml run --service-ports app -d
