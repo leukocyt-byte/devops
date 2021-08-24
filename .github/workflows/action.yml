@@ -25,9 +25,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: list files
-        run: pwd && ls -la
       - name: Push docker image
-        run: "/docker-image/docker-compose up -d"
+        run: docker compose -f docker-image/docker-compose.yaml up -d
       - name: Run container with app
-        run: "docker compose up -d" 
+        run: docker compose up -d
