@@ -1,5 +1,7 @@
 version: "3.8"
 services:
   app:
-    build: -t leukocyt/flask-app:dev .
+    build:
+      context: .
+      dockerfile: Dockerfile
     image: leukocyt/flask-app:dev
