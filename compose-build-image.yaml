@@ -1,5 +1,5 @@
 version: "3.8"
 services:
   app:
-    build: .
+    build: -t leukocyt/flask-app:dev .
     image: leukocyt/flask-app:dev
