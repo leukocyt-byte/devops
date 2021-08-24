@@ -26,6 +26,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Push docker image
+        run: pwd && ls -la
         run: "/docker-image/docker-compose up -d"
       - name: Run container with app
         run: "docker compose up -d" 
