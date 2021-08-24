@@ -33,4 +33,4 @@ jobs:
         run: docker kill $(docker ps -aq)
         continue-on-error: true
       - name: Run container with app
-        run:  docker-compose -f compose-run-container.yaml run -d --service-ports app
+        run:  docker-compose -f compose-run-container.yaml run -d -p 6001:5001 app
