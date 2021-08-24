@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   app:
+    build: .
     image: leukocyt/flask-app:dev
     command: "python /app/flask-app.py"
     ports:
