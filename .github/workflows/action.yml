@@ -29,5 +29,7 @@ jobs:
         run:  docker-compose -f compose-build-image.yaml build
       - name: Push docker image
         run: docker-compose -f compose-build-image.yaml push
+      - name: Clean containers
+        run: [ "$(docker ps -a | grep flask-app-in-docker_app_1)" ] && docker rm -f flask-app-in-docker_app_1
       - name: Run container with app
-        run: docker-compose -f compose-run-container.yaml run --service-ports app
+        run:  docker-compose -f compose-run-container.yaml run --service-ports app
