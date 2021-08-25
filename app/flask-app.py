@@ -10,7 +10,7 @@ def hello():
 
 @app.route('/healthz')
 def health():
-    return "healthy"
+    return "healthy unicorn"
 
 @app.route('/ready')
 def ready():
