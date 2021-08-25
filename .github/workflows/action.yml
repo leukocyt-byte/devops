@@ -30,6 +30,6 @@ jobs:
       - name: Push docker image
         run: docker image push leukocyt/flask-app:${GITHUB_REF#refs/heads/}
       - name: Clean containers
-        run: if [ $(docker ps | grep 6001 | awk {'print $1'} | grep -vc grep > 0) ]; then docker kill $(docker ps -a | grep 6001 | awk {'print $1'}); else echo 'no containters'; fi 
+        run: if $(docker ps | grep 6001 | awk {'print $1'} | grep -vc grep > 0); then docker kill $(docker ps -a | grep 6001 | awk {'print $1'}); else echo 'no containters'; fi 
       - name: Run container with app
         run:  docker run -d -p 6001:5001 leukocyt/flask-app:${GITHUB_REF#refs/heads/}
