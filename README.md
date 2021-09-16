@@ -1,4 +1,4 @@
-Workflow builds app on each commit and deploys it to azure based linux server with public ip (configured as github actions runner for this repository). App runs as docker container on port 6001. You can find it at http://23.102.59.131:6001/. Docker image is pushed to Docker Hub repository: https://hub.docker.com/repository/docker/leukocyt/flask-app. 
+Workflow builds app on each commit and deploys it to azure based linux server with public ip (configured as github actions runner for this repository). App runs as docker container on port 6001. (Free tier of server no longer available). Docker image is pushed to Docker Hub repository: https://hub.docker.com/repository/docker/leukocyt/flask-app. 
 # DevOps Internship Challenge 2021
 
 Build and deploy application from **app** folder. Use whatever service or platform you want (AWS, Azure, GCP, bare metal and so on). Most of them have free tier option.
